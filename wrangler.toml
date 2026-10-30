@@ -1,0 +1,14 @@
+# Only needed if you deploy with the wrangler CLI (see SETUP.md, option B).
+name = "venom-bot"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[kv_namespaces]]
+binding = "VENOM"
+id = "PASTE_KV_ID_HERE"
+
+[ai]
+binding = "AI"
